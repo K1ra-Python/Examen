@@ -1,5 +1,8 @@
 <?php
-    session_start()
+    session_start();
+    if(isset($_SESSION['user_login'])){
+        header('index.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
