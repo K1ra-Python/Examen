@@ -17,7 +17,7 @@ if ($user && password_verify($pass, $user['PASSWORD'])) {
     // Удаляем сообщение об ошибке, если оно было установлено ранее
     unset($_SESSION['ERROR_MESSAGE']);
     // Перенаправляем пользователя на админ-страницу
-    header('Location: ../admin.php');
+    header('Location: ../index.php');
     exit();
 } else {
     // Логин не найден или пароль не совпадает
