@@ -19,6 +19,9 @@ if(!isset($_SESSION['user_login'])){
         <div class="header"></div>
         <div class="statement_status">
             <h1>hello</h1>
+            <div class="to_make_statement">
+                <a href="create_Statement.php">Написать жалобу</a>
+            </div>
         </div>
     </div>
 </body>
