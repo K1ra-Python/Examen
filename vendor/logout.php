@@ -1,0 +1,5 @@
+<?php
+if(isset($_SESSION['user_login'])){
+    unset($_SESSION['user_login']);
+    header('Location: ../auto.php');
+}

@@ -17,7 +17,7 @@ $user_login = $_SESSION['user_login'];
 </head>
 <body>
     <div class="wrap">
-        <div class="header"></div>
+        <div class="header"><a href='vendor/logout.php'>Выйти</a></div>
         <div class="statement_status">
             <h1>hello,<?echo '<span>'.$_SESSION['user_login'].'</span>'?></h1>
             <div class="all_statement">
