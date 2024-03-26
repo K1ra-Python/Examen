@@ -5,6 +5,13 @@ require_once 'connect.php';
 $login = $_POST['login'];
 $pass = $_POST['pass'];
 
+if ($login === 'admin' && $pass === 'root') {
+    // Логин и пароль админа верны, перенаправляем на админ-панель
+    $_SESSION['user_admin'] = $login; // Устанавливаем в сессию логин пользователя
+    header('Location: ../admin.php'); // Путь к админ-панели
+    exit();
+}
+
 $sql = $pdo->prepare("SELECT PASSWORD FROM Users WHERE LOGIN = ?");
 $sql->execute([$login]);
 $user = $sql->fetch(PDO::FETCH_ASSOC);
