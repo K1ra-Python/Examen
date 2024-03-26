@@ -1,6 +1,9 @@
 <?php
 
-session_start()
+session_start();
+if(!isset($_SESSION['user_login'])){
+    header("Location:auto.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +18,7 @@ session_start()
     <div class="wrap">
         <div class="header"></div>
         <div class="statement_status">
-
+            <h1>hello</h1>
         </div>
     </div>
 </body>
