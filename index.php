@@ -1,3 +1,8 @@
+<?php
+
+session_start()
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +12,11 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="wrap">
+        <div class="header"></div>
+        <div class="statement_status">
+
+        </div>
+    </div>
 </body>
 </html>
