@@ -4,6 +4,7 @@ session_start();
 if(!isset($_SESSION['user_login'])){
     header("Location: auto.php");
 }
+$user_login = $_SESSION['user_login'];
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +19,12 @@ if(!isset($_SESSION['user_login'])){
     <div class="wrap">
         <div class="header"></div>
         <div class="statement_status">
-            <h1>hello</h1>
+            <h1>hello,<?echo '<span>'.$_SESSION['user_login'].'</span>'?></h1>
+            <div class="all_statement">
+                <?php
+                require_once 'vendor/index_script.php';
+                ?>
+            </div>
             <div class="to_make_statement">
                 <a href="create_Statement.php">Написать жалобу</a>
             </div>
